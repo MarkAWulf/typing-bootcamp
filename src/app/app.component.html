@@ -1,20 +1,14 @@
 <div class="container">
    <div class="columns is-centered">
     <div class="box column is-one-third">
-
       <h1 class="title has-text-centered">Typing Challange</h1>
-
       <p class="has-text-centered">
-        <span 
-          [class]="compare(letter, inputValue[i])" 
+        <span [class]="compare(letter, inputValue[i])" 
           *ngFor="let letter of randomText.split(''); let i = index;">{{ letter }}</span>
       </p>
       <div class="field">
-        
-        <input type="text" (input)="onInputChange($event)" />
-
+          <input class="input is-fullwidth" type="text" (input)="onInputChange($event)" />
       </div>
-      
       <div *ngIf="randomText === inputValue" class="box has-text-centered">
         <h1 class="title">Success!</h1> 
       </div>
